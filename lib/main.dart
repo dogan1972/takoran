@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+//import 'package:getwidget/getwidget.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,11 +9,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
+      theme: ThemeData.light(),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.directions_walk)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.directions_ferry)),
+          ],
+          leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
           title: Text(
             "Kanyonlar Diyarı Takoran",
           ),
@@ -50,8 +57,8 @@ class Home extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "Saklı cennet Takorana hosgeldiniz.",
-                style: GoogleFonts.pinyonScript(fontSize: 60),
+                "Saklı Cennet Takorana hoşgeldiniz.",
+                style: TextStyle(fontFamily: "Licorice-Regular", fontSize: 45),
               ),
             ],
           ),
