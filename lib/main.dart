@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
+// ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,15 +13,17 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.directions_walk)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.directions_ferry)),
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.directions_walk)),
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.directions_ferry)),
           ],
-          leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          title: Text(
+          leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+          title: const Text(
             "Kanyonlar Diyarı Takoran",
           ),
         ),
-        body: Home(),
+        body: const Home(),
       ),
     );
   }
@@ -37,11 +39,11 @@ class Home extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: EdgeInsets.all(30),
+          padding: const EdgeInsets.all(30),
           alignment: Alignment.topCenter,
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10), topRight: Radius.circular(10)),
             gradient: LinearGradient(
@@ -53,7 +55,7 @@ class Home extends StatelessWidget {
                 fit: BoxFit.cover),
           ),
           child: Column(
-            children: [
+            children: const [
               Text(
                 "Saklı Cennet Takorana hoşgeldiniz.",
                 style: TextStyle(fontFamily: "Licorice-Regular", fontSize: 45),
